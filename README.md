@@ -2,57 +2,42 @@
 
 A complete console-based Bank Management System built using Python (OOPs Concept) and MySQL for secure data handling.
 
-### Main Menu - 3 Options
-1. Customer Registration
-2. Customer Login
-3. Admin Login
+This project demonstrates real-world banking operations with secure login and admin controls.
 
-### 1. Customer Registration
-- Stores: First Name, Last Name, DOB, City, State, Address, Phone, Pincode, Password
-- After registration, a unique `Customer ID` is auto-generated and displayed.
-- Customer can Login using Customer ID & Password.
+### Main Features - 3 Options
 
-### 2. Customer Login - Features
+**1. Customer Registration**
+   - New user can create bank account
+   - Auto-generates Account Number
 
-**a) My Profile**
-   - View Profile: Displays all registration information
-   - Update Profile: Update Email, Phone Number, Address
-
-**b) My Account**
-   - Create New Account
-   - View Account Details
-
-**c) Banking Operations**
+**2. Customer Login**
+   - Secure Login with Account Number & PIN
+   - Check Balance
    - Deposit Money
-   - Withdrawal Money
-   - Transfer Money
-   - Account Statement
+   - Withdraw Money
+   - Money Transfer
+   - View Transaction History
 
-**d) Other Services**
-   - Beneficiary Management
-   - Loans: Apply for Loan, View Your Loan, Pay EMI, View EMI Statement
+**3. Admin Login**
+   - View All Customers
+   - Search Customer by Account Number
+   - Delete Customer Account
+   - View All Transactions
 
-**e) Security**
-   - Change Password
-   - Logout
-
-### 3. Admin Login
-Admin logs in with Admin Password.
-
-**Admin Features:**
-- View All Customers
-- View All Customer Accounts
-- View Beneficiary of Customers
-- View All Loans
-- Approve / Reject Loan
-- View All Loan Payments
-
-### Tech Stack & Concepts Used
-- **Language:** Python (OOPs - Class, Object, Inheritance)
+### Tech Stack
+- **Language:** Python
 - **Database:** MySQL
-- **Data Handling:** CRUD operations, Data Validation, Transaction Management
+- **Concepts Used:** OOPs, MySQL Connector, Exception Handling
 
-### How to Run
-1. Create database from `database.sql`
-2. Install dependency: `pip install mysql-connector-python`
-3. Run: `python main.py`
+### How to Run This Project (Setup)
+
+**1. Database Setup**
+- Open MySQL Workbench
+- Import the `database.sql` file from this repository
+- This will create `bank_management_system` database with all tables
+
+**2. Python Setup**
+- Install MySQL connector: `pip install mysql-connector-python`
+- Open `BANKPROJ.PY` and update your MySQL password in connection:
+  ```python
+  mysql.connector.connect(host="localhost", user="root", password="YOUR_PASSWORD", database="bank_management_system")
