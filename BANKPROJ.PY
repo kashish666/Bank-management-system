@@ -527,6 +527,8 @@ class BankingApp:
                                                   database="myproject"
                                               )
         cursor=conn.cursor(dictionary=True)
+        if not hasattr(self,'account_number') or self.account_number is None or self.account_number == "" :
+            print("Account is not created . Please first create account! ")
         acc_num=self.account_number
         ben_id=input("enter beneficiary  id  :")
         amount=float(input("enter amount for transfer: "))
